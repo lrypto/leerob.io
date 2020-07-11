@@ -39,9 +39,7 @@ const BlogPost = (frontMatter) => {
               minWidth="105px"
               textAlign={['left', 'right']}
               mb={[4, 0]}
-            >
-              {`${views ? format(views) : '–––'} views`}
-            </Text>
+            />
           </Flex>
           <Text color={secondaryTextColor[colorMode]}>{summary}</Text>
         </Box>

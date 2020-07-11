@@ -23,7 +23,7 @@ import { frontMatter as nextFirebase } from './blog/nextjs-firebase-serverless.m
 const url = 'https://elrypto.dev';
 const title = 'Blog – elrypto';
 const description =
-  'Thoughts on the software industry, programming, tech, videography, music, and my personal life.';
+  'Sharing what I have learned building scalable, performanant modern web applications';
 
 const Blog = () => {
   const [searchValue, setSearchValue] = useState('');
@@ -73,8 +73,7 @@ const Blog = () => {
               Blog
             </Heading>
             <Text color={secondaryTextColor[colorMode]}>
-              {`I've been writing online since 2014, mostly about web development and tech careers.
-                In total, I've written ${blogPosts.length} articles on this site.
+              {`Sharing what i have learned building scalable, performant modern web applications - ${blogPosts.length} articles on this site.
                 Use the search below to filter by title.`}
             </Text>
             <InputGroup my={4} mr={4} w="100%">
