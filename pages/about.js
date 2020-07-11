@@ -13,8 +13,8 @@ import {
 import Container from '../components/Container';
 import { CustomLink } from '../components/MDXComponents';
 
-const url = 'https://leerob.io/about';
-const title = 'About Me – Lee Robinson';
+const url = 'https://elrypto.dev/about';
+const title = 'About Me – elrypto';
 
 const About = () => {
   const { colorMode } = useColorMode();
