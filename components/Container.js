@@ -29,11 +29,13 @@ const Container = ({ children }) => {
     dark: 'rgba(23, 25, 35, 0.8)'
   };
 
-  // dark mode default
-  useEffect(() => {
-    toggleColorMode();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  /*
+   * dark mode default
+   * useEffect(() => {
+   *   toggleColorMode();
+   *   // eslint-disable-next-line react-hooks/exhaustive-deps
+   * }, []);
+   */
 
   return (
     <>
@@ -50,17 +52,11 @@ const Container = ({ children }) => {
         mb={8}
         mx="auto"
       >
-        <IconButton
-          aria-label="Toggle dark mode"
-          icon={colorMode === 'dark' ? 'sun' : 'moon'}
-          onClick={toggleColorMode}
-        />
+        <Button as="a" variant="ghost" p={[1, 4]}>
+          elrypto.dev
+        </Button>
+
         <Box>
-          <NextLink href="/dashboard" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              Dashboard
-            </Button>
-          </NextLink>
           <NextLink href="/blog" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>
               Blog
@@ -71,11 +67,12 @@ const Container = ({ children }) => {
               About
             </Button>
           </NextLink>
-          <NextLink href="/" passHref>
-            <Button as="a" variant="ghost" p={[1, 4]}>
-              Home
-            </Button>
-          </NextLink>
+          <IconButton
+            ml={2}
+            aria-label="Toggle dark mode"
+            icon={colorMode === 'dark' ? 'sun' : 'moon'}
+            onClick={toggleColorMode}
+          />
         </Box>
       </StickyNav>
       <Flex

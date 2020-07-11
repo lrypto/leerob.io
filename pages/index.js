@@ -1,10 +1,8 @@
 import React from 'react';
 import { useColorMode, Heading, Text, Flex, Stack } from '@chakra-ui/core';
 
-import Timeline from '../components/Timeline';
 import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
-import Subscribe from '../components/Subscribe';
 import ProjectCard from '../components/ProjectCard';
 
 import { frontMatter as styleGuides } from './blog/style-guides-component-libraries-design-systems.mdx';
