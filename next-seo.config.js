@@ -1,20 +1,19 @@
-const title = 'Lee Robinson – Developer, writer, creator.';
-const description =
-  'Front-end developer, JavaScript enthusiast, and course creator.';
+const title = 'elrypto - builder';
+const description = 'Builder of scalable, performant modern web applications';
 
 const SEO = {
   title,
   description,
-  canonical: 'https://leerob.io',
+  canonical: 'https://elrypto.dev',
   openGraph: {
     type: 'website',
-    locale: 'en_IE',
-    url: 'https://leerob.io',
+    locale: 'en_CA',
+    url: 'https://elrypto.dev',
     title,
     description,
     images: [
       {
-        url: 'https://leerob.io/static/images/og.jpg',
+        url: 'https://elrypto.dev/static/images/og.jpg',
         alt: title,
         width: 1280,
         height: 720
@@ -22,8 +21,8 @@ const SEO = {
     ]
   },
   twitter: {
-    handle: '@leeerob',
-    site: '@leeerob',
+    handle: '@elrypto',
+    site: '@elrypto',
     cardType: 'summary_large_image'
   }
 };
