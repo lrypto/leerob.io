@@ -1,16 +1,37 @@
 ---
-title: 'Hasura for Development - 3 Ways'
+title: 'Hasura for Development - 3 Quick Ways'
 publishedAt: '2020-07-12'
 summary: 'Setting up Hasura for Development with Docker, Heroku and Digital Ocean'
 image: '/static/images/hasura-for-dev/banner.jpg'
 ---
 
-## Overview
+## Hasuara
 
-For the main website, the requirements were fairly straight forward:
+Hasura is a graphQL engine that pairs with the postgres database and gives you fast and effective way to
+get up and running as well operate a production graphQL endpoint. It actually is so fast to develop with
+I dropped my previous prototyping approaches such as Firebase because it is just as fast and I am building
+close the deployable endstate.
 
-- Basic splash page with information about the product.
-- About page with information on the employees.
-- Frequently asked questions page.
-- Save off information from a contact form.
-- Cheap hosting. Ideally free.
+### Why use Hasura
+
+If you have a new greenfield project and you are going to use graphQL, Hasura is a really, really
+attractive option.
+
+Having built graphQL resolvers with node.js express endpoints with Apollo and other approaches, Hasura
+is pretty much superior in every way if you are willing to use postgres database and you do not expect
+to be doing a lot of query level operations on the database or any unothodox logical data stitching or
+other non-conventional data approaches.
+
+## 3 Quick Options for a Development Setup
+
+While there are other options such as other cloud providers or building the Hasura engine and running
+postgres locally, I think these 3 options are good to quickly jump into Hasura and be up in running in
+a few minutes.
+
+### 1 - Docker (Locally)
+
+### 2 - Heroku
+
+### 3 - Digital Ocean
+
+## Conclusion

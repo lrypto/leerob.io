@@ -6,22 +6,21 @@ import {
   Text,
   Flex,
   Stack,
-  Avatar,
-  Link,
-  Box
+  Avatar
 } from '@chakra-ui/core';
 
 import Container from '../components/Container';
-import Subscribe from '../components/Subscribe';
 import ViewCounter from '../components/ViewCounter';
 import BlogSeo from '../components/BlogSeo';
 
-const editUrl = (slug) =>
-  `https://github.com/leerob/leerob.io/edit/master/pages/blog/${slug}.mdx`;
-const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `https://leerob.io/blog/${slug}`
-  )}`;
+/*
+ * const editUrl = (slug) =>
+ *   `https://github.com/leerob/leerob.io/edit/master/pages/blog/${slug}.mdx`;
+ * const discussUrl = (slug) =>
+ *   `https://mobile.twitter.com/search?q=${encodeURIComponent(
+ *     `https://leerob.io/blog/${slug}`
+ *   )}`;
+ */
 
 export default (frontMatter) => {
   const slug = frontMatter.__resourcePath
@@ -37,7 +36,7 @@ export default (frontMatter) => {
 
     return (
       <Container>
-        <BlogSeo url={`https://leerob.io/blog/${slug}`} {...frontMatter} />
+        <BlogSeo url={`https://elrypto.dev/blog/${slug}`} {...frontMatter} />
         <Stack
           as="article"
           spacing={8}
@@ -68,13 +67,13 @@ export default (frontMatter) => {
               <Flex align="center">
                 <Avatar
                   size="xs"
-                  name="Lee Robinson"
-                  src="https://bit.ly/33vEjhB"
+                  name="elrypto"
+                  src="https://bit.ly/3gO3AJf"
                   mr={2}
                 />
                 <Text fontSize="sm" color={textColor[colorMode]}>
                   {frontMatter.by}
-                  {'Lee Robinson / '}
+                  {'elrypto / '}
                   {format(parseISO(frontMatter.publishedAt), 'MMMM dd, yyyy')}
                 </Text>
               </Flex>
