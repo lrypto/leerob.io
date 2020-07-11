@@ -1,16 +1,16 @@
 {
   "name": "leerob.io",
-  "description": "My personal website.",
+  "description": "elrypto.dev blog, forked from leerob.io",
   "version": "0.0.0",
   "author": {
-    "name": "Lee Robinson",
-    "email": "me@leerob.io",
-    "url": "https://leerob.io"
+    "name": "El Rypto",
+    "email": "elrypto@gmail.com",
+    "url": "https://elrypto.dev"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leerob/leerob.io.git"
+    "url": "git+https://github.com/lrypto/leerob.io.git"
   },
   "scripts": {
     "build": "next build",

@@ -34,14 +34,10 @@ const Index = () => {
           alignItems="flex-start"
           maxWidth="700px"
         >
-          <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
-            Hey, I’m Lee Robinson
-          </Heading>
-          <Text color={secondaryTextColor[colorMode]}>
-            I’m a developer, writer, and creator living in Des Moines, IA.
-            You’ve found my personal slice of the internet – everything you want
-            to know and more is here.
-          </Text>
+          <HomeHero
+            secondaryTextColor={secondaryTextColor}
+            colorMode={colorMode}
+          />
         </Flex>
         <Flex
           flexDirection="column"
@@ -51,7 +47,7 @@ const Index = () => {
           mt={8}
         >
           <Heading letterSpacing="tight" mb={4} size="xl" fontWeight={700}>
-            Most Popular
+            Most Recent
           </Heading>
           <BlogPost {...styleGuides} />
           <BlogPost {...stripeDesign} />
@@ -66,30 +62,47 @@ const Index = () => {
           <Heading letterSpacing="tight" mb={4} size="xl" fontWeight={700}>
             Projects
           </Heading>
-          <ProjectCard
-            title="React 2025"
-            description="Build and deploy a modern Jamstack application using the most popular open-source software."
-            href="https://react2025.com/"
-            icon="react2025"
-          />
-          <ProjectCard
-            title="Mastering Next.js"
-            description="A free video course for building static and server-side rendered applications with Next.js and React."
-            href="https://masteringnextjs.com/"
-            icon="nextjs"
-          />
-          <ProjectCard
-            title="jamstackfns"
-            description="The best serverless functions for JAMstack applications. Deploy to Vercel or Netlify for your static site."
-            href="https://jamstackfns.com/"
-            icon="jamstackfns"
-          />
+          <Projects />
         </Flex>
-        <Timeline />
-        <Subscribe />
       </Stack>
     </Container>
   );
 };
+
+const HomeHero = ({ secondaryTextColor, colorMode }) => (
+  <>
+    <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
+      elrypto.dev
+    </Heading>
+    <Text color={secondaryTextColor[colorMode]}>
+      Sharing what i have learned when building Scalable and Performant Modern
+      Web Applications with nextjs, React, Typescript, graphQL, Hasura,
+      tailwindCSS, Google Cloud and react-query (and sometimes Ethereum).
+    </Text>
+  </>
+);
+
+const Projects = () => (
+  <>
+    <ProjectCard
+      title="kodeart"
+      description="A platform developed to enable and empower developers"
+      href="https://kode.art"
+      icon="react2025"
+    />
+    <ProjectCard
+      title="brightgrape"
+      description="A product that finds the best wine for you for the store you in"
+      href="https://brightgrape.com"
+      icon="nextjs"
+    />
+    <ProjectCard
+      title="blockexpo"
+      description="A blockexplorer for the Ethereum blockchain"
+      href="https://blockexpo.io"
+      icon="jamstackfns"
+    />
+  </>
+);
 
 export default Index;

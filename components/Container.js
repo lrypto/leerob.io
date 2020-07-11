@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NextLink from 'next/link';
 import { useColorMode, Button, Flex, Box, IconButton } from '@chakra-ui/core';
 import styled from '@emotion/styled';
@@ -28,6 +28,12 @@ const Container = ({ children }) => {
     light: 'rgba(255, 255, 255, 0.8)',
     dark: 'rgba(23, 25, 35, 0.8)'
   };
+
+  // dark mode default
+  useEffect(() => {
+    toggleColorMode();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>

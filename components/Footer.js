@@ -3,7 +3,7 @@ import { Flex, Link, IconButton } from '@chakra-ui/core';
 
 const Footer = () => (
   <Flex justify="center" mb={4}>
-    <Link href="https://twitter.com/leeerob" title="Twitter" isExternal>
+    <Link href="https://twitter.com/elrypto" title="Twitter" isExternal>
       <IconButton
         aria-label="Twitter"
         icon="twitter"
@@ -12,7 +12,7 @@ const Footer = () => (
         variant="ghost"
       />
     </Link>
-    <Link href="https://github.com/leerob" title="GitHub" isExternal>
+    <Link href="https://github.com/lrypto" title="GitHub" isExternal>
       <IconButton
         aria-label="GitHub"
         icon="github"
@@ -21,20 +21,21 @@ const Footer = () => (
         variant="ghost"
       />
     </Link>
+
     <Link
-      href="https://www.linkedin.com/in/leejamesrobinson/"
-      title="LinkedIn"
+      href="https://www.youtube.com/channel/UC0CFiIg0jhtBRy_U0Rs4gpw"
+      title="Email"
       isExternal
     >
       <IconButton
-        aria-label="LinkedIn"
-        icon="linkedin"
+        aria-label="Email"
+        icon="YouTube"
         size="lg"
         color="gray.500"
         variant="ghost"
       />
     </Link>
-    <Link href="mailto:me@leerob.io" title="Email" isExternal>
+    <Link href="mailto:elrypto@gmail.com" title="Email" isExternal>
       <IconButton
         aria-label="Email"
         icon="mail"

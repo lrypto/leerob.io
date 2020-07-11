@@ -1,4 +1,4 @@
-const title = 'elrypto - builder';
+const title = 'elrypto - developer builder';
 const description = 'Builder of scalable, performant modern web applications';
 
 const SEO = {
