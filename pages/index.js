@@ -71,9 +71,9 @@ const HomeHero = ({ secondaryTextColor, colorMode }) => (
       elrypto.dev
     </Heading>
     <Text color={secondaryTextColor[colorMode]}>
-      Sharing what i have learned when building Scalable and Performant Modern
-      Web Applications with nextjs, React, Typescript, graphQL, Hasura,
-      tailwindCSS, Google Cloud and react-query (and sometimes Ethereum).
+      Sharing what i have learned building Scalable, Performant Modern Web
+      Applications with nextjs, React, Typescript, graphQL, Hasura, tailwindCSS,
+      Google Cloud & kubernetes, react-query and Ethereum.
     </Text>
   </>
 );

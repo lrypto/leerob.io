@@ -85,17 +85,8 @@ export default (frontMatter) => {
               </Text>
             </Flex>
           </Flex>
+
           {children}
-          <Subscribe />
-          <Box>
-            <Link href={discussUrl(slug)} isExternal>
-              {'Discuss on Twitter'}
-            </Link>
-            {` • `}
-            <Link href={editUrl(slug)} isExternal>
-              {'Edit on GitHub'}
-            </Link>
-          </Box>
         </Stack>
       </Container>
     );
