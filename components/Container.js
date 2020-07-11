@@ -29,13 +29,11 @@ const Container = ({ children }) => {
     dark: 'rgba(23, 25, 35, 0.8)'
   };
 
-  /*
-   * dark mode default
-   * useEffect(() => {
-   *   toggleColorMode();
-   *   // eslint-disable-next-line react-hooks/exhaustive-deps
-   * }, []);
-   */
+  // dark mode default
+  useEffect(() => {
+    toggleColorMode();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -52,10 +50,11 @@ const Container = ({ children }) => {
         mb={8}
         mx="auto"
       >
-        <Button as="a" variant="ghost" p={[1, 4]}>
-          elrypto.dev
-        </Button>
-
+        <NextLink href="/" passHref>
+          <Button as="a" variant="ghost" p={[1, 4]}>
+            elrypto.dev
+          </Button>
+        </NextLink>
         <Box>
           <NextLink href="/blog" passHref>
             <Button as="a" variant="ghost" p={[1, 4]}>

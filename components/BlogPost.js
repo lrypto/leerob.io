@@ -19,7 +19,6 @@ const BlogPost = (frontMatter) => {
     .replace('.mdx', '');
 
   const { data } = useSWR(`/api/page-views?id=${slug}`, fetcher);
-  const views = data?.total;
 
   return (
     <NextLink href={`blog/${slug}`} passHref>
