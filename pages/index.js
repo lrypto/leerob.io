@@ -5,7 +5,7 @@ import Container from '../components/Container';
 import BlogPost from '../components/BlogPost';
 import ProjectCard from '../components/ProjectCard';
 
-import { frontMatter as styleGuides } from './blog/style-guides-component-libraries-design-systems.mdx';
+import { frontMatter as hasuraForDev } from './blog/hasura-for-dev.mdx';
 import { frontMatter as nextFirebase } from './blog/nextjs-firebase-serverless.mdx';
 
 const Index = () => {
@@ -46,7 +46,7 @@ const Index = () => {
           <Heading letterSpacing="tight" mb={4} size="xl" fontWeight={700}>
             Most Recent
           </Heading>
-          <BlogPost {...styleGuides} />
+          <BlogPost {...hasuraForDev} />
           <BlogPost {...nextFirebase} />
         </Flex>
         <Flex
