@@ -1,0 +1,45 @@
+---
+title: 'Hasura on Digital Ocean'
+publishedAt: '2020-07-19'
+summary: 'Quickly get Hasura GraphQL engine up and running on Digital Ocean Cloud provider'
+image: '/static/images/hasura-on-digital-ocean/banner.jpg'
+---
+
+## Why Digital Ocean
+
+## Digital Ocean
+
+### Setup
+
+Setup up or Login to your Digital Ocean Account
+
+Hasura DO One-Click
+
+```
+https://marketplace.digitalocean.com/apps/hasura?action=deploy&refcode=c4d9092d2c48&utm_source=hasura&utm_campaign=docs
+```
+
+Add an A record on your domain mapping to your DO droplet IP
+
+Setup configuration in
+
+```
+/etc/hasura/docker-compose.yaml
+```
+
+update Caddy file
+
+```
+hasura-sub.domain.com {
+  proxy / graphql-engine:8080 {
+    websocket
+  }
+}
+
+```
+
+Hasura instructions
+
+```
+https://hasura.io/docs/1.0/graphql/manual/guides/deployment/digital-ocean-one-click.html
+```

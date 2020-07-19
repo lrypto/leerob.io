@@ -1,0 +1,72 @@
+---
+title: 'Hasura Migrations for Backups'
+publishedAt: '2020-07-20'
+summary: 'You can quickly extract your database structure and hasura metadata with Hasura migrations'
+image: '/static/images/hasura-migrations-for-backups/banner.jpg'
+---
+
+## Why
+
+### install hasura cli
+
+Official [Hasura CLI documentation](https://hasura.io/docs/1.0/graphql/manual/hasura-cli/index.html).
+
+### init migrations
+
+In your terminal, navigate to your project directory and
+initialize the hasura in the project where it's migrations should be
+
+```
+hasura init
+```
+
+### extract hasura migration from endpoint
+
+```
+hasura migrate create init --from-server --endpoint [YOUR_END_POINT] --admin-secret=[YOUR_HAS_ADM_PWD]
+```
+
+You endpoint should be your base server url path, not the gql endpoint.
+
+```
+https://server.tld
+```
+
+not
+
+```
+https://server.tld/v1/graphql
+```
+
+### extract hasura metadata
+
+```
+hasura metadata export init --endpoint [YOUR_END_POINT] --admin-secret=[YOUR_HAS_ADM_PWD]
+```
+
+## Restoring
+
+## setup config.yaml
+
+```
+version: 2
+endpoint: [ENDPOINT]
+metadata_directory: metadata
+admin_secret: [HAS_ADM_PWD]
+actions:
+  kind: synchronous
+  handler_webhook_baseurl: [ENDPOINT]
+```
+
+### restore
+
+Run the following two command AFTER you have configured your config.yaml to
+the datastore you want to apply the changes to.
+
+```
+hasura migrate apply
+```
+
+```
+hasura metadata apply
+```

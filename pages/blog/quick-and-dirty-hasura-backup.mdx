@@ -99,4 +99,18 @@ export default Button;
 
 ## Restoring
 
+```
+pg_restore -v --no-owner --host=<server name> --port=<port> --username=<user@servername> --dbname=<target database name> <database>.dump
+```
+
+### Sample Restoration with
+
+### Note on Google Cloud
+
+whitelisting
+
 ## Final Words
+
+Really are best off with a regular sustainable backup and recovery solution
+for your Hasura fronted postgres database. However, if you are in
+a pinch, this is handy to have in your pocket.
